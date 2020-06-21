@@ -1,10 +1,14 @@
 @font-face {
     font-family: Raleway-Regular;
-    src: url(Raleway/static/Raleway-Regular.ttf)
+    src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Regular.ttf)
 }
 @font-face {
     font-family: Raleway-Light;
-    src: url(Raleway/static/Raleway-Light.ttf)
+    src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Light.ttf)
+}
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Bold.ttf)
 }
 
 h1,
@@ -56,7 +60,8 @@ header a {
     color: #3C3B3A;
 }
 
-button[type="submit"] {
+button[type="submit"],
+.discover button {
     font-size: 3rem;
     color: white;
     font-family: Raleway-Regular;
@@ -70,6 +75,13 @@ button[type="submit"] {
     box-shadow: 0px 10px 10px #26A682;
 }
 
+button[type="submit"] p,
+.discover button[type="submit"] p {
+    font-size: 3rem;
+    color: white;
+    font-family: Raleway-Bold;
+}
+
 .home-introduction img{
     max-width: 75%;
     display: block;
@@ -81,4 +93,70 @@ button[type="submit"] {
     width: 500px;
     height: 250px;
     object-fit: cover;
+}
+
+.discover h1 {
+    margin-top: 25px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+.discover h2 {
+    font-size: 2rem;
+    color: #529180;
+    margin-top: 15px;
+    font-style: normal;
+    font-family: Raleway-Light;
+}
+
+.discover p {
+    font-size: 1.25rem;
+    color: #3C3B3A;
+    line-height: 2.25;
+}
+
+.discover button[type="submit"] p {
+    font-size: 1.75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discover button[type="submit"] {
+    display: flex;
+    width: 45%;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+.quote {
+    background-color: #3C3B3A;
+    padding-top: 25px;
+}
+
+.quote img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 5px solid white;
+}
+
+.quote h1 {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.quote p {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 2.25;
+    padding-bottom: 75px;
+}
+
+footer {
+    background-color: #3C3B3A;
 }
