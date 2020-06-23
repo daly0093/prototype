@@ -58,6 +58,20 @@ header a {
     font-size: 1.75rem;
     line-height: 1.3;
     color: #3C3B3A;
+    margin-top: 5px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    margin: 10px 0;
+    color: #3C3B3A;
+}
+
+.icons p {
+    font-size: 1rem;
+
 }
 
 button[type="submit"],
@@ -83,7 +97,7 @@ button[type="submit"] p,
 }
 
 .home-introduction img{
-    max-width: 75%;
+    max-width: 65%;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -103,7 +117,7 @@ button[type="submit"] p,
 }
 
 .discover h2 {
-    font-size: 2rem;
+    font-size: 1.85rem;
     color: #529180;
     margin-top: 15px;
     font-style: normal;
@@ -157,6 +171,41 @@ button[type="submit"] p,
     padding-bottom: 75px;
 }
 
+
+
 footer {
     background-color: #3C3B3A;
+    color: white;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.socials {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.socials h1 {
+    font-family: Raleway-Light;
+    margin-bottom: 10px;
+}
+
+.socials img {
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+.back-to-top {
+    text-align: center;
+    margin-left: auto;
+    margin: 50px 0;
+}
+
+.back-to-top p {
+    margin: 0;
 }
