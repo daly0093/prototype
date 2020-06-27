@@ -102,7 +102,7 @@ button[type="submit"] p,
 }
 
 .discover img {
-    width: 500px;
+    width: 768px;
     height: 250px;
     object-fit: cover;
 }
@@ -123,6 +123,12 @@ button[type="submit"] p,
 }
 
 .discover p {
+    font-size: 1.25rem;
+    color: #3C3B3A;
+    line-height: 2.25;
+}
+.discover .p-alt {
+    display: none;
     font-size: 1.25rem;
     color: #3C3B3A;
     line-height: 2.25;
@@ -265,8 +271,8 @@ footer {
     }
 
     .discover img {
-        width: 500px;
-        height: 250px;
+        width: 1000px;
+        height: 200px;
         object-fit: cover;
     }
     
@@ -285,13 +291,18 @@ footer {
         font-family: Raleway-Light;
     }
     
-    .discover p {
+    .discover p  {
+        display: none;
+    }
+    
+    .discover .p-alt {
         font-size: 1.1rem;
-        color: #3C3B3A;
         line-height: 2.25;
+        display: block;
     }
     
     .discover button[type="submit"] p {
+        display: block;
         font-size: 1.75rem;
         margin-left: auto;
         margin-right: auto;
@@ -302,5 +313,9 @@ footer {
         width: 30%;
         margin-left: auto;
         margin-top: 25px;
+    }
+
+    #entertainment {
+        display: block;
     }
 }
