@@ -285,36 +285,19 @@ footer {
     button[type="submit"] p,
     .discover button[type="submit"] p {
         font-size: 2.5rem;
-        color: white;
-        font-family: Raleway-Bold;
     }
     
     .home-introduction img{
         max-width: 45%;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     .discover img {
         width: 1000px;
         height: 200px;
-        object-fit: cover;
     }
     
     .discover h1 {
         margin-top: 50px;
-        font-weight: bold;
-        font-style: italic;
-        font-size: 2.5rem;
-    }
-    
-    .discover h2 {
-        font-size: 1.85rem;
-        color: #529180;
-        margin-top: 15px;
-        font-style: normal;
-        font-family: Raleway-Light;
     }
     
     .discover p  {
@@ -323,13 +306,11 @@ footer {
     
     .discover .p-alt {
         font-size: 1.1rem;
-        line-height: 2.25;
         display: block;
     }
     
      .discover button[type="submit"] p {
         display: block;
-        font-size: 1.75rem;
     }
     
     .discover button[type="submit"] {
@@ -370,47 +351,121 @@ footer {
     }
     
     .quote p {
-        color: white;
         font-size: 1.33rem;
         line-height: 1.75;
-        padding-bottom: 75px;
         grid-area: paragraph;
     }
 
     footer {
-        background-color: #3C3B3A;
-        color: white;
-    
+        grid-template-columns: 20% 60% 20%; 
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
         display: grid;
-        grid-template-columns: 20% 60% 20%;
-        grid-template-areas: 
-            ". socials back-to-top"
+        grid-template-columns: 100%;
+        grid-template-rows: 3.1% 41% 20.4% 10% 20.4% 5.1%; 
+
+        /* header 0.9cm
+        home-introduction 11.9cm
+        1discover 5.9cm
+        quote 2.9cm
+        2discover 5.9cm
+        footer 1.5cm */
+    }
+
+    header img {
+        max-width: 5%;
+    }
+
+    .links {
+        margin-right: 10%;
+    }
+
+    .home-introduction {
+        margin: 50px 10% 0 10%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 20% 10% 15% 20% 10%;
+        grid-template-areas:
+            "h1 image"
+            "p image"
+            "icons image"
+            "button image"
+            "scroll scroll"
+    }
+
+    .home-introduction h1 {
+        grid-area: h1;
+        padding:0;
+        margin:0;
+    }
+
+    .home-introduction p {
+        grid-area: p;
+        margin:0;
+        font-size: 1.33rem;
     }
     
-    .socials {
-        text-align: center;
-        margin: 50px auto;
-        grid-area: socials;
+    .home-introduction .icons {
+        grid-area: icons;
     }
-    
-    .socials h1 {
-        font-family: Raleway-Light;
-        margin-bottom: 10px;
-    }
-    
-    .socials img {
-        padding: 0 10px;
-        vertical-align: middle;
-    }
-    
-    .back-to-top {
-        text-align: center;
-        margin: 50px auto 50px auto;
-        grid-area: back-to-top;
-    }
-    
-    .back-to-top p {
+
+    .home-introduction button {
+        grid-area: button;
         margin: 0;
+        padding: 0;
+        width: 60%;
+        height: 25%;
+    }
+
+    .home-introduction img {
+        grid-area: image;
+        max-width: 100%;
+    }
+
+    .home-introduction .scroll {
+        grid-area: scroll;
+    }
+
+    .icons p {
         font-size: 0.75rem;
+    }
+
+    .discover {
+        background-color: #F2F2F2;
+
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 10% 10% 15% 10%;
+    }
+
+    .discover img {
+        width: 640px;
+        height: 275px;
+    }
+    
+    .discover h1 {
+        margin-top: 50px;
+    }
+    
+    .discover p  {
+        display: none;
+    }
+    
+    .discover .p-alt {
+        font-size: 1.1rem;
+        display: block;
+    }
+    
+     .discover button[type="submit"] p {
+        display: block;
+    }
+    
+    .discover button[type="submit"] {
+        margin: 25px 10% 25px auto;
+        padding: 0;
+        width: 40%;
     }
 }
