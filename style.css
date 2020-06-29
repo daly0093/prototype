@@ -292,7 +292,7 @@ footer {
     }
 
     .discover img {
-        width: 1000px;
+        width: 1500px;
         height: 200px;
     }
     
@@ -361,11 +361,11 @@ footer {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
     main {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 3.1% 41% 20.4% 10% 20.4% 5.1%; 
+        grid-template-rows: 5% 40% 20% 10% 20% 6%; 
 
         /* header 0.9cm
         home-introduction 11.9cm
@@ -387,7 +387,7 @@ footer {
         margin: 50px 10% 0 10%;
         display: grid;
         grid-template-columns: 40% 60%;
-        grid-template-rows: 20% 10% 15% 20% 10%;
+        grid-template-rows: 25% 15% 15% 33% 10%;
         grid-template-areas:
             "h1 image"
             "p image"
@@ -414,10 +414,8 @@ footer {
 
     .home-introduction button {
         grid-area: button;
-        margin: 0;
-        padding: 0;
-        width: 60%;
-        height: 25%;
+        height: 20%;
+        width: 70%;
     }
 
     .home-introduction img {
@@ -435,37 +433,140 @@ footer {
 
     .discover {
         background-color: #F2F2F2;
+        padding: 50px 80px 50px 75px;
 
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: 10% 10% 15% 10%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 20% 25% 40%;
+        grid-template-areas:
+            "discover-image discover-h1"
+            "discover-image discover-h2"
+            "discover-image discover-p"
+            "discover-image discover-button"
     }
 
     .discover img {
-        width: 640px;
+        width: 960px;
         height: 275px;
+        /* margin: 50px 10px 50px 75px; */
+        grid-area: discover-image;
     }
     
     .discover h1 {
-        margin-top: 50px;
+        margin: 0 0 0 10%;
+        grid-area: discover-h1;
+    }
+
+    .discover h2 {
+        grid-area: discover-h2;
     }
     
     .discover p  {
-        display: none;
+        display: block;
+        grid-area: discover-p;
+        line-height: 1.25;
     }
     
     .discover .p-alt {
-        font-size: 1.1rem;
-        display: block;
+        display: none;
     }
     
      .discover button[type="submit"] p {
-        display: block;
+        grid-area: discover-button;
+        padding: auto 0;
+        font-size: 1.75rem;
     }
     
     .discover button[type="submit"] {
-        margin: 25px 10% 25px auto;
-        padding: 0;
-        width: 40%;
+        margin: auto 0 0 auto;
+        width: 30%;
+    }     
+
+    #entertainment {
+        font-size: 1.25rem;
+        line-height: 1.25;
+    }
+
+    .quote {
+        padding: 10px 50px;
+        display: grid;
+        grid-template-columns: 15% 15% 70%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "image name paragraph"
+            "image title paragraph"
+    }
+    
+    .quote img {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+        grid-area: image;
+    }
+    
+    .quote h1 {
+        grid-area: name;
+        font-size: 1.5rem;
+        padding-top: 50px;
+        margin: 0;
+    }
+
+    .quote #president {
+        grid-area: title;
+        padding: 0 0 50px 0;
+        margin: 0;
+    }
+    
+    .quote p {
+        font-size: 1.33rem;
+        line-height: 1.5;
+        grid-area: paragraph;
+        padding: 15px 0 0 0;
+        margin: 0 50px;
+    }
+
+    footer {
+        background-color: #3C3B3A;
+        color: white;
+    
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+            ". socials back-to-top"
+
+    }
+
+    .socials {
+        text-align: center;
+        margin: auto;
+        grid-area: socials;
+    }
+    
+    .socials h1 {
+        font-family: Raleway-Light;
+        margin-bottom: 10px;
+    }
+    
+    .socials img {
+        padding: 0 10px;
+        vertical-align: middle;
+    }
+    
+    .back-to-top {
+        text-align: center;
+        margin: auto;
+        padding-top: 10px;
+        grid-area: back-to-top;
+    }
+    
+    .back-to-top p {
+        margin: 0;
+        font-size: 0.75rem;
+    }
+    
+    .back-to-top img {
+        height: 25px;
+        width: 25px;
     }
 }
