@@ -48,6 +48,7 @@ header a {
 }
 
 .home-introduction h1{
+    font-family: Raleway-Bold;
     font-size: 3rem;
     margin: 0 inherit;
     padding: 25px 0;
