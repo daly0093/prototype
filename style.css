@@ -34,10 +34,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header img {
     max-width: 25%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header a {
@@ -46,6 +53,7 @@ header a {
     font-size: 1.25rem;
     margin: 15px;
     font-family: Raleway-Regular, sans-serif;
+    padding: 5px 0;
 }
 
 .active {
@@ -57,7 +65,7 @@ header a {
     font-size: 3rem;
     margin: 0 10%; 
     /* i tried using margin: 0 inherit; on the above line, however when i validated my code it said that it was an incorrect line of code. i tohught that what i wrote was correct but i suppose not. */
-    padding: 25px 0;
+    padding: 30px 0;
     color: #3C3B3A;
 }
 
@@ -84,25 +92,18 @@ header a {
     display: none;
 }
 
-button[type="submit"],
+button,
 .discover button {
     color: white;
-    font-family: Raleway-Regular;
+    font-family: Raleway-Bold;
+    font-size: 1.5rem;
+    padding: 10px 125px;
     background-color: #26A682;
     border: 0;
     border-radius: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 80%;
+    margin: 25px auto;
+    display: block;
     box-sizing: border-box;
-    box-shadow: 0px 10px 10px #26A682;
-}
-
-button[type="submit"] p,
-.discover button[type="submit"] p {
-    font-size: 3rem;
-    color: white;
-    font-family: Raleway-Bold;
 }
 
 .home-introduction img{
@@ -146,17 +147,9 @@ button[type="submit"] p,
     line-height: 2.25;
 }
 
-.discover button[type="submit"] p {
-    font-size: 1.75rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.discover button[type="submit"] {
-    display: flex;
-    width: 45%;
-    margin-left: auto;
-    margin-top: 25px;
+.discover button {
+    padding: 10px 30px;
+    margin: 25px 10% 25px auto;
 }
 
 .quote {
@@ -192,7 +185,7 @@ footer {
     color: white;
 
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-areas: 
         ". socials back-to-top"
 }
@@ -241,6 +234,11 @@ footer {
         margin-right: auto;
         margin-left: 10%;
     }
+
+    .links {
+        flex-direction: row;
+        margin-right: 10%;
+    }
     
     header a {
         margin-left: 10px;
@@ -283,15 +281,12 @@ footer {
         width: 25px;        
     }
     
-    button[type="submit"] {
+    button {
         display: block;
         margin: 25px auto;
         width: 40%;
-    }
-    
-    button[type="submit"] p,
-    .discover button[type="submit"] p {
         font-size: 2.5rem;
+        padding: 10px 30px;
     }
     
     .home-introduction img{
@@ -314,16 +309,6 @@ footer {
     .discover .p-alt {
         font-size: 1.1rem;
         display: block;
-    }
-    
-     .discover button[type="submit"] p {
-        display: block;
-    }
-    
-    .discover button[type="submit"] {
-        margin: 25px 10% 25px auto;
-        padding: 0;
-        width: 40%;
     }
 
     #entertainment {
@@ -421,7 +406,7 @@ footer {
 
     .home-introduction button {
         grid-area: button;
-        height: 20%;
+        height: 30%;
         width: 70%;
     }
 
@@ -438,21 +423,23 @@ footer {
         font-size: 0.75rem;
     }
 
-    .discover {
+    .discover,
+    #firstdiscover {
         background-color: #F2F2F2;
         padding: 50px 80px 50px 75px;
 
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 15% 20% 25% 40%;
+        grid-template-rows: 15% 20% 40% 40%;
         grid-template-areas:
-            "discover-image discover-h1"
-            "discover-image discover-h2"
-            "discover-image discover-p"
-            "discover-image discover-button"
+            " discover-h1 discover-image"
+            "discover-h2 discover-image"
+            "discover-p discover-image"
+            "discover-button discover-image"
     }
 
-    .discover img {
+    .discover img,
+    #firstdiscover img {
         width: 960px;
         height: 275px;
         /* margin: 50px 10px 50px 75px; */
@@ -478,14 +465,12 @@ footer {
         display: none;
     }
     
-     .discover button[type="submit"] p {
-        grid-area: discover-button;
-        font-size: 1.75rem;
-    }
-    
-    .discover button[type="submit"] {
+    .discover button {
         margin: auto 0 0 auto;
-        width: 30%;
+        grid-area: discover-button;
+        font-size: 1.75rem;    
+        margin-right: 10%;
+
     }     
 
     #entertainment {
@@ -531,6 +516,35 @@ footer {
         margin: 0 50px;
     }
 
+    #firstdiscover {
+        grid-template-areas:
+            "firstdiscover-image firstdiscover-h1"
+            "firstdiscover-image firstdiscover-h2"
+            "firstdiscover-image firstdiscover-p"
+            "firstdiscover-image firstdiscover-button"
+    }
+
+    #firstdiscover img {
+        grid-area: firstdiscover-image;
+    }
+
+    #firstdiscover h1 {
+        grid-area: firstdiscover-h1;
+    }
+
+    #firstdiscover h2 {
+        grid-area: firstdiscover-h2;
+    }
+
+    #firstdiscover p {
+        grid-area: firstdiscover-p;
+    }
+
+    #firstdiscover button {
+        grid-area: firstdiscover-button;
+        margin-right: 0;
+    }
+
     footer {
         background-color: #3C3B3A;
         color: white;
@@ -540,7 +554,6 @@ footer {
         grid-template-rows: 100%;
         grid-template-areas: 
             ". socials back-to-top"
-
     }
 
     .socials {
@@ -584,10 +597,16 @@ footer {
 }
 
 .expected h1 {
-    font-family: Raleway-Bold;
+    /* font-family: Raleway-Bold;
     color: #3C3B3A;
     font-size: 3rem;
-    margin-bottom: 25px;
+    margin-bottom: 25px; */
+
+    font-family: Raleway-Bold;
+    font-size: 3rem;
+    margin: 0 10%; 
+    /* i tried using margin: 0 inherit; on the above line, however when i validated my code it said that it was an incorrect line of code. i tohught that what i wrote was correct but i suppose not. */
+    color: #3C3B3A;
 }
 
 .expected .h1-alt {
@@ -662,6 +681,14 @@ footer {
     font-size: 3.5rem;
 }
 
+#greenfilter {
+    background-color: rgba(16, 64, 50, 0.6);
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0%;
+}
+
 .break img,
 .friends img,
 .newyear img,
@@ -722,16 +749,7 @@ footer {
 }
 
 .newsletter button {
-    color: white;
-    font-family: Raleway-Bold;
-    font-size: 1.5rem;
     padding: 10px 30px;
-    background-color: #26A682;
-    border: 0;
-    border-radius: 50px;
-    margin: 25px auto;
-    display: block;
-    box-sizing: border-box;
 }
 
 .thanks {
