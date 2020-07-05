@@ -1164,3 +1164,158 @@ footer {
 
                                                                 /* CONTACT */
 
+.hear h1 {
+    font-family: Raleway-Bold;
+    font-size: 4.25rem;
+    margin: 0 10%; 
+    /* i tried using margin: 0 inherit; on the above line, however when i validated my code it said that it was an incorrect line of code. i tohught that what i wrote was correct but i suppose not. */
+    padding: 30px 0;
+    color: #3C3B3A;
+}
+
+.hear p {
+    font-size: 1.6rem;
+    line-height: 2;
+    color: #3C3B3A;
+    margin-top: 5px;
+}
+
+.hear p:nth-child(3) {
+    display: none;
+}
+
+.hear img {
+    display: block;
+    margin: 25px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.contactus {
+    display: flex;
+    flex-direction: column;
+    background-color: #26a682;
+    border-radius: 30px;
+    margin: 50px 10%;
+    box-shadow: 10px 10px 10px rgba(128,128,128, 0.5);
+}
+
+.contactus h1 {
+    color: white;
+    margin: 25px 5% 0 5%;
+    font-size: 3.5rem;
+    font-family: Raleway-Bold;
+}
+
+form {
+    margin: 5%;
+}
+
+label {
+    color: white;
+    font-family: Raleway-Regular;
+    font-size: 1.5rem;
+}
+
+input[type="text"] {
+    font-family: Raleway-Regular;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    border: 0;
+    display: block;
+    clear: both;
+    width: 95%;
+    margin: 10px 0 25px 0;
+    padding: 10px 0px 10px 25px;
+}
+
+input[type="text"]:nth-child(8) {
+    padding: 10px 0px 100px 25px;
+    border-radius: 15px;
+}
+
+input[type="submit"] {
+    font-family: Raleway-Bold;
+    color: white;
+    background-color: #3c3b39;
+    font-size: 3rem;
+    border-radius: 30px;
+    border: 0;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 25px;
+    box-shadow: 0px 10px 10px rgba(60,59,57, 0.7);
+}
+
+.location h1 {
+    font-size: 3rem;
+    font-family: Raleway-Bold;
+    margin-top: 50px;
+}
+
+.location h2 {
+    font-size: 2rem;
+    font-family: Raleway-Light;
+    margin: 25px 10%;
+}
+
+.location p {
+    font-size: 1.25rem;
+    line-height: 2;
+}
+
+.location p:nth-child(7) {
+    margin-bottom: 50px;
+}
+
+.location img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .hear p:nth-child(2) {
+        display: none;
+    }
+
+    .hear p:nth-child(3) {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .hear img {
+        margin: 0 auto;
+        max-width: 60%;
+    }
+
+    .contactus {
+        margin: 0px 10%;
+    }
+
+    .contactus h1 {
+        font-size: 4.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+        margin: 25px 0;
+    }
+
+    input[type="submit"] {
+        font-size: 3rem;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+
+    .location h1 {
+        font-size: 4rem;
+    }
+
+    .location h2 {
+        font-size: 2.5rem;
+    }
+}
