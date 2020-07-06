@@ -683,13 +683,16 @@ footer {
     font-size: 3.5rem;
 }
 
-#greenfilter {
+#greenaboutfilter,
+#greenservicesfilter {
     background-color: rgba(16, 64, 50, 0.75);
     width: 100%;
     height: 250px;
     position: absolute;
     top: 0%;
 }
+
+
 
 .break img,
 .friends img,
@@ -823,7 +826,8 @@ footer {
         object-fit: cover;
     }
 
-    #greenfilter {
+    #greenaboutfilter,
+    #greenservicesfilter {
         height: 175px;
     }
     
@@ -1174,8 +1178,8 @@ footer {
 }
 
 .hear p {
-    font-size: 1.6rem;
-    line-height: 2;
+    font-size: 1.75rem;
+    line-height: 1.3;
     color: #3C3B3A;
     margin-top: 5px;
 }
@@ -1268,13 +1272,19 @@ input[type="submit"] {
     margin-bottom: 50px;
 }
 
-.location img {
+#contact-map {
     width: 100%;
     height: 500px;
     object-fit: cover;
 }
 
 @media (min-width: 768px) {
+    .hear h1 {
+        font-family: Raleway-Bold;
+        font-size: 4.5rem;
+        margin-top: 50px;
+        padding-bottom: 0;
+    }
     .hear p:nth-child(2) {
         display: none;
     }
@@ -1282,11 +1292,10 @@ input[type="submit"] {
     .hear p:nth-child(3) {
         display: block;
         font-size: 1.5rem;
-        line-height: 1.5;
     }
 
     .hear img {
-        margin: 0 auto;
+        margin: 25px auto;
         max-width: 60%;
     }
 
@@ -1301,7 +1310,8 @@ input[type="submit"] {
     input[type="text"] {
         font-size: 1rem;
         margin: 25px 0;
-    }
+        padding: 15px 0px 15px 25px;
+   }
 
     input[type="submit"] {
         font-size: 3rem;
@@ -1317,5 +1327,49 @@ input[type="submit"] {
 
     .location h2 {
         font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .contactcontent {
+        display: grid;
+        grid-template-columns: 60% 10% 20%; 
+        grid-template-rows: 950px 40%;
+        grid-template-areas:
+            "hear contactus contactus"
+            "location contact-map contact-map"
+    }
+
+    .hear {
+        grid-area: hear;
+    }
+
+    .hear p:nth-child(2) {
+        display: block;
+        font-size: 1.25rem;
+    }
+
+    .hear p:nth-child(3) {
+        display: none;
+    }
+
+    .contactus {
+        grid-area: contactus;
+        margin: 80px 0 50px 0;
+    }
+
+    .contactus h1 {
+        font-size: 4rem;
+    }
+
+    .location {
+        grid-area: location;
+    }
+
+    #contact-map {
+        grid-area: contact-map;
+        margin-top: 50px;
+        width: 750px;
+        height: 354px;
     }
 }
