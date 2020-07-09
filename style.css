@@ -1,8 +1,5 @@
-/* NOTES */
-
-/* RECODE THE BUTTONS ON THE HOME PAGE */
-
 /* HOME */
+
 @font-face {
     font-family: Raleway-Regular;
     src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Regular.ttf)
@@ -16,15 +13,38 @@
     src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Bold.ttf)
 }
 
-h1,
-h2,
-p,
-button {
-    margin: 0 10%;
-    font-family: Raleway-Regular, sans-serif;
+:root {
+    --ac-green: #26a682;
+    --dark-grey: #3c3b3a;
 }
 
-img {
+main h1,
+main h2,
+main p,
+main a {
+    font-family: Raleway-Regular, sans-serif;
+    margin: 0 10%;
+}
+
+.home-introduction h1,
+.expected h1,
+.hear h1 {
+    font-size: 3rem;
+    font-family: Raleway-Bold;
+    color: var(--dark-grey);
+    padding: 30px 0;
+}
+
+.home-introduction p,
+.expected p,
+.hear p {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--dark-grey);
+    margin-top: 5px;
+}
+
+main img {
     max-width: 100%;
     height: auto;
 }
@@ -33,8 +53,8 @@ header {
     background-color: #3C3B3A;
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 header img {
@@ -48,11 +68,10 @@ header img {
 }
 
 header a {
+    font-size: 1.25rem;
     text-decoration: none;
     color: white;
-    font-size: 1.25rem;
     margin: 15px;
-    font-family: Raleway-Regular, sans-serif;
     padding: 5px 0;
 }
 
@@ -60,28 +79,12 @@ header a {
     font-weight: bold;
 }
 
-.home-introduction h1{
-    font-family: Raleway-Bold;
-    font-size: 3rem;
-    margin: 0 10%; 
-    /* i tried using margin: 0 inherit; on the above line, however when i validated my code it said that it was an incorrect line of code. i tohught that what i wrote was correct but i suppose not. */
-    padding: 30px 0;
-    color: #3C3B3A;
-}
-
-.home-introduction p {
-    font-size: 1.75rem;
-    line-height: 1.3;
-    color: #3C3B3A;
-    margin-top: 5px;
-}
-
 .icons {
+    text-align: center;
+    color: var(--dark-grey);
+    margin: 10px 0;
     display: grid;
     grid-template-columns: auto auto;
-    text-align: center;
-    margin: 10px 0;
-    color: #3C3B3A;
 }
 
 .icons p {
@@ -92,25 +95,25 @@ header a {
     display: none;
 }
 
-button,
-.discover button {
-    color: white;
+main button {
+    font-size: 2.5rem;
     font-family: Raleway-Bold;
-    font-size: 1.5rem;
-    padding: 10px 125px;
-    background-color: #26A682;
-    border: 0;
+    color: white;
+    background-color: var(--ac-green);
     border-radius: 50px;
+    border: 0;
     margin: 25px auto;
+    padding: 10px 125px;
     display: block;
     box-sizing: border-box;
+    box-shadow: 0px 10px 10px rgba(128,128,128, 0.7);
 }
 
 .home-introduction img{
     max-width: 65%;
     display: block;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 .discover img {
@@ -120,51 +123,53 @@ button,
 }
 
 .discover h1 {
-    margin-top: 25px;
+    font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;
-    font-size: 2.5rem;
+    color: var(--dark-grey);
+    margin-top: 25px;
 }
 
 .discover h2 {
     font-size: 1.85rem;
+    font-family: Raleway-Light;
+    font-style: normal;
     color: #529180;
     margin-top: 15px;
-    font-style: normal;
-    font-family: Raleway-Light;
 }
 
 .discover p {
     font-size: 1.25rem;
-    color: #3C3B3A;
     line-height: 2.25;
+    color: var(--dark-grey);
 }
 
 .discover .p-alt {
-    display: none;
     font-size: 1.25rem;
-    color: #3C3B3A;
+    color: var(--dark-grey);
     line-height: 2.25;
+    display: none;
 }
 
 .discover button {
-    padding: 10px 30px;
+    font-size: 1.5rem;
     margin: 25px 10% 25px auto;
+    padding: 10px 30px;
 }
 
 .quote {
-    background-color: #3C3B3A;
+    background-color: var(--dark-grey);
     padding-top: 25px;
 }
 
 .quote img {
     width: 250px;
     height: 250px;
-    display: block;
-    margin: 25px auto;
     border-radius: 100%;
-    box-sizing: border-box;
     border: 5px solid white;
+    margin: 25px auto;
+    display: block;
+    box-sizing: border-box;
 }
 
 .quote h1 {
@@ -174,19 +179,18 @@ button,
 }
 
 .quote p {
-    color: white;
     font-size: 1.25rem;
     line-height: 2.25;
+    color: white;
     padding-bottom: 75px;
 }
 
 footer {
-    background-color: #3C3B3A;
     color: white;
-
+    background-color: var(--dark-grey);
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-areas: 
+    grid-template-areas:
         ". socials back-to-top"
 }
 
@@ -202,8 +206,8 @@ footer {
 }
 
 .socials img {
-    padding: 0 10px;
     vertical-align: middle;
+    padding: 0 10px;
 }
 
 .back-to-top {
@@ -214,13 +218,13 @@ footer {
 }
 
 .back-to-top p {
-    margin: 0;
     font-size: 0.75rem;
+    margin: 0;
 }
 
 .back-to-top img {
-    height: 25px;
     width: 25px;
+    height: 25px;
 }
 
 @media (min-width: 768px) {
@@ -236,28 +240,32 @@ footer {
     }
 
     .links {
-        flex-direction: row;
         margin-right: 10%;
+        flex-direction: row;
     }
     
     header a {
         margin-left: 10px;
     }
 
-    .home-introduction h1{
-        font-family: Raleway-Bold;
+    .home-introduction h1,
+    .expected h1,
+    .hear h1{
         font-size: 4.5rem;
+        font-family: Raleway-Bold;
         margin-top: 50px;
         padding-bottom: 0;
     }
     
-    .home-introduction p {
+    .home-introduction p,
+    .expected p,
+    .hear p {
         font-size: 1.5rem;
     }
-    
+
     .icons {
-        grid-template-columns: auto auto auto auto;
         margin: 25px 10%;
+        grid-template-columns: auto auto auto auto;
     }
 
     .icons p {
@@ -265,25 +273,23 @@ footer {
     }
 
     .scroll {
+        margin: 10px;
         display: block;
-        margin: 25px;
     }
 
     .scroll p {
+        font-size: 1rem;
         text-align: center;
         display: block;
-        font-size: 1rem;
     }
     
     .scroll img {
-        transform: scaleY(-1);
-        height: 25px;
         width: 25px;        
+        height: 25px;
+        transform: scaleY(-1);
     }
     
     button {
-        display: block;
-        margin: 25px auto;
         font-size: 2.5rem;
         padding: 10px 30px;
     }
@@ -311,15 +317,15 @@ footer {
     }
 
     #entertainment {
-        display: block;
         font-size: 1.1rem;
+        display: block;
     }
 
     .quote {
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 225px 40px 150px;
-        grid-template-areas: 
+        grid-template-areas:
             "image paragraph"
             "name paragraph"
             "title paragraph"
@@ -333,8 +339,8 @@ footer {
     }
     
     .quote h1 {
-        grid-area: name;
         font-size: 1.5rem;
+        grid-area: name;
     }
 
     .quote #president {
@@ -357,13 +363,6 @@ footer {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 5% 40% 20% 10% 20% 6%; 
-
-        /* header 0.9cm
-        home-introduction 11.9cm
-        1discover 5.9cm
-        quote 2.9cm
-        2discover 5.9cm
-        footer 1.5cm */
     }
 
     header img {
@@ -375,7 +374,7 @@ footer {
     }
 
     .home-introduction {
-        margin: 50px 10% 0 10%;
+        margin: 50px 10% 0;
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 25% 15% 15% 33% 10%;
@@ -388,15 +387,15 @@ footer {
     }
 
     .home-introduction h1 {
+        margin: 0;
+        padding: 0;
         grid-area: h1;
-        padding:0;
-        margin:0;
     }
 
     .home-introduction p {
-        grid-area: p;
-        margin:0;
         font-size: 1.33rem;
+        margin: 0;
+        grid-area: p;
     }
     
     .home-introduction .icons {
@@ -404,14 +403,14 @@ footer {
     }
 
     .home-introduction button {
+        margin: 80px auto;
+        padding: 10px 30px;
         grid-area: button;
-        height: 30%;
-        width: 70%;
     }
 
     .home-introduction img {
-        grid-area: image;
         max-width: 100%;
+        grid-area: image;
     }
 
     .home-introduction .scroll {
@@ -426,7 +425,6 @@ footer {
     #firstdiscover {
         background-color: #F2F2F2;
         padding: 50px 80px 50px 75px;
-
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 50px 50px 125px 50px;
@@ -441,7 +439,6 @@ footer {
     #firstdiscover img {
         width: 960px;
         height: 275px;
-        /* margin: 50px 10px 50px 75px; */
         grid-area: discover-image;
     }
     
@@ -456,11 +453,10 @@ footer {
     }
     
     .discover p  {
-        display: block;
-        grid-area: discover-p;
         line-height: 1.25;
         margin: 0 5% 0 0;
-        margin-right: 5%;
+        display: block;
+        grid-area: discover-p;
     }
     
     .discover .p-alt {
@@ -468,11 +464,10 @@ footer {
     }
     
     .discover button {
-        margin: auto 0 0 auto;
-        grid-area: discover-button;
         font-size: 1.75rem;    
-        margin-right: 5%;
+        margin: auto 5% 0 auto;
         padding: 5px 20px;
+        grid-area: discover-button;
     }     
 
     #entertainment {
@@ -485,7 +480,7 @@ footer {
         display: grid;
         grid-template-columns: 15% 15% 70%;
         grid-template-rows: 50% 50%;
-        grid-template-areas: 
+        grid-template-areas:
             "image name paragraph"
             "image title paragraph"
     }
@@ -498,24 +493,24 @@ footer {
     }
     
     .quote h1 {
-        grid-area: name;
         font-size: 1.5rem;
-        padding-top: 50px;
         margin: 0;
+        padding-top: 50px;
+        grid-area: name;
     }
 
     .quote #president {
-        grid-area: title;
-        padding: 0 0 50px 0;
         margin: 0;
+        padding: 0 0 50px 0;
+        grid-area: title;
     }
     
     .quote p {
         font-size: 1.33rem;
         line-height: 1.5;
-        grid-area: paragraph;
-        padding: 15px 0 0 0;
         margin: 0 50px;
+        padding: 15px 0 0 0;
+        grid-area: paragraph;
     }
 
     #firstdiscover {
@@ -546,20 +541,18 @@ footer {
     }
 
     #firstdiscover button {
-        grid-area: firstdiscover-button;
         margin-right: 0;
+        grid-area: firstdiscover-button;
     }
 
     footer {
-        background-color: #3C3B3A;
         color: white;
+        background-color: #3C3B3A;
         padding: 25px 0;
-
-    
         display: grid;
         grid-template-columns: 10% 80% 10%;
         grid-template-rows: 100%;
-        grid-template-areas: 
+        grid-template-areas:
             ". socials back-to-top"
     }
 
@@ -575,8 +568,8 @@ footer {
     }
     
     .socials img {
-        padding: 0 10px;
         vertical-align: middle;
+        padding: 0 10px;
     }
     
     .back-to-top {
@@ -587,13 +580,13 @@ footer {
     }
     
     .back-to-top p {
-        margin: 0;
         font-size: 0.75rem;
+        margin: 0;
     }
     
     .back-to-top img {
-        height: 25px;
         width: 25px;
+        height: 25px;
     }
 }
 
@@ -604,21 +597,11 @@ footer {
 }
 
 .expected h1 {
-    font-family: Raleway-Bold;
-    font-size: 3rem;
-    margin: 0 10%; 
-    /* i tried using margin: 0 inherit; on the above line, however when i validated my code it said that it was an incorrect line of code. i tohught that what i wrote was correct but i suppose not. */
-    color: #3C3B3A;
+    padding: 0 0 30px 0;
 }
 
 .expected .h1-alt {
     display: none;
-}
-
-.expected p {
-    font-size: 1.6rem;
-    color: #3C3B3A;
-    line-height: 1.6;    
 }
 
 .expected .p-alt {
@@ -626,34 +609,32 @@ footer {
 }
 
 .expected img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 80%;
-    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
 
 .about,
 .services {
+    margin-bottom: 20px;
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
 }
 
 .about h1,
 .services h1 {
-    position: absolute;
-    z-index: 9;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 6%;
-    text-align: center;
-    width: 60%;
-
-    color: white;
     font-size: 4rem;
     font-family: Raleway-Bold;
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    top: 6%;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    position: absolute;
 }
 
 .about img,
@@ -664,23 +645,23 @@ footer {
 }
 
 .about h2 {
-    margin-top: 30px;
     font-size: 2.5rem;
-    font-style: italic;
     font-family: Raleway-Bold;
-    color: #3C3B3A;
+    font-style: italic;
+    color: var(--dark-grey);
+    margin-top: 30px;
 }
 
 .about p {
-    margin-top: 10px;
-    line-height: 2.125;
     font-size: 1.3rem;
-    color: #3C3B3A;
+    line-height: 2.125;
+    color: var(--dark-grey);
+    margin-top: 10px;
 }
 
 .services h1 {
-    top: 35%;
     font-size: 3.5rem;
+    top: 35%;
 }
 
 #greenaboutfilter,
@@ -688,39 +669,36 @@ footer {
     background-color: rgba(16, 64, 50, 0.75);
     width: 100%;
     height: 250px;
-    position: absolute;
     top: 0%;
+    position: absolute;
 }
-
-
 
 .break img,
 .friends img,
 .newyear img,
 .climbing img {
-    display: none;
     max-width: 100%;
-    height: auto;
+    display: none;
 }
 
 .break h2,
 .friends h2,
 .newyear h2,
 .climbing h2 {
-    margin-top: 25px;
     font-size: 2.33rem;
     font-family: Raleway-Bold;
-    color: #3C3B3A;
+    color: var(--dark-grey);
+    margin-top: 25px;
 }
 
 .break h3,
 .friends h3,
 .newyear h3,
 .climbing h3 {
-    margin: 10px 0 10px 10%;
-    font-family: Raleway-Light;
     font-size: 2rem;
-    color: #26A682;
+    font-family: Raleway-Light;
+    color: var(--ac-green);
+    margin: 10px 0 10px 10%;
 }
 
 .break p,
@@ -729,8 +707,8 @@ footer {
 .climbing p {
     font-size: 1.25rem;
     line-height: 2.25;
+    color: var(--ac-green);
     padding-bottom: 25px;
-    color: #26A682;
 }
 
 .friends,
@@ -740,20 +718,21 @@ footer {
 }
 
 .newsletter {
-    background-color: #3C3B3A;
+    background-color: var(--dark-grey);
     padding-top: 30px;
     padding-bottom: 10px;
 }
 
 .newsletter h1 {
-    color: white;
     font-size: 1.5rem;
     text-align: center;
+    color: white;
     margin: 0 0 15px 0;
 }
 
 .newsletter button {
     padding: 10px 30px;
+    box-shadow: none;
 }
 
 .thanks {
@@ -761,30 +740,19 @@ footer {
 }
 
 .thanks h1 {
-    font-family: Raleway-Bold;
     font-size: 4.1rem;
-    text-align: center;
-    color: #3C3B3A;
+    font-family: Raleway-Bold;
     line-height: 1.25;
+    text-align: center;
+    color: var(--dark-grey);
     margin: 25px 0;
 }
 
 .thanks img {
     object-fit: cover;
-    display: block;
-    margin: 50px auto 50px auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.thanks img:nth-child(4) {
     width: 300px;
-    height: auto;
-}
-
-.thanks img:nth-child(5) {
-    width: 200px;
-    height: auto;
+    margin: 50px auto 50px auto;
+    display: block;
 }
 
 @media (min-width: 768px) {          
@@ -794,17 +762,10 @@ footer {
 
     .expected h1 {
         display: none;
-        margin-bottom: 10px;
     }
     
     .expected .h1-alt {
         display: block;
-        font-size: 4.8rem;
-    }
-
-    .expected p {
-        font-size: 1.47rem;
-        line-height: 1.5;   
     }
 
     .expected p:nth-child(3) {
@@ -832,8 +793,8 @@ footer {
     }
     
     .about p {
-        line-height: 2;
         font-size: 1.125rem;
+        line-height: 2;
     }
 
     .services h1 {
@@ -844,16 +805,15 @@ footer {
     .friends img,
     .newyear img,
     .climbing img {
-        display: block;
         width: 90%;
         height: 360px;
         object-fit: cover;
+        display: block;
     }
 
     .break,
     .newyear {
         padding: 50px;
-
         display: grid;
         grid-template-columns: 35% 65%;
         grid-template-rows: 50px 50px 260px;
@@ -870,21 +830,21 @@ footer {
 
     .break h2,
     .newyear h2 {
+        margin: 0;
         grid-area: break-h2;
-        margin:0;
     }
 
     .break h3,
     .newyear h3 {
+        margin: 0;
         grid-area: break-h3;
-        margin:0;
     }
 
     .break p,
     .newyear p {
-        grid-area: break-p;
-        margin:0;
         line-height: 1.6;
+        margin: 0;
+        grid-area: break-p;
     }
 
     .newsletter {
@@ -899,14 +859,13 @@ footer {
     }
     
     .newsletter button {
-        margin: 15px 25px 15px 50px;
         font-size: 1.5rem;
+        margin: 15px 25px 15px 50px;
     }
 
     .friends,
     .climbing {
         padding: 50px;
-
         display: grid;
         grid-template-columns: 65% 35%;
         grid-template-rows: 50px 50px 260px;
@@ -923,22 +882,22 @@ footer {
 
     .friends h2,
     .climbing h2 {
-        grid-area: friends-h2;
         margin: 0;
+        grid-area: friends-h2;
     }
 
     .friends h3,
     .climbing h3 {
-        grid-area: friends-h3;
         margin: 0;
+        grid-area: friends-h3;
     }
 
     .friends p,
     .climbing p {
-        grid-area: friends-p;
-        margin:0;
         line-height: 1.6;
+        margin: 0;
         padding: 0 25px 0 0;
+        grid-area: friends-p;
     }
 
     .thanks h1 {
@@ -947,17 +906,14 @@ footer {
 
     .thanks img:nth-child(2) {
         width: 500px;
-        height: auto;
     }
     
     .thanks img:nth-child(4) {
         width: 250px;
-        height: auto;
     }
     
     .thanks img:nth-child(5) {
         width: 150px;
-        height: auto;
     }
 }
 
@@ -968,20 +924,21 @@ footer {
 
     .expected {
         padding: 0 10%;
-
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 30% 20% 20%;
+        grid-template-rows: 30% 20% 20% 20%;
         grid-template-areas:
             "expected-h1 expected-image"
+            ". expected-image"
             "expected-p expected-image"
-            "expected-p2 expected-image"
+            "expected-p2 ."
+
     }
 
     .expected h1 {
+        margin: 0;
         display: block;
         grid-area: expected-h1;
-        margin: 0;
     }
     
     .expected .h1-alt {
@@ -989,10 +946,10 @@ footer {
     }
 
     .expected p:nth-child(3) {
+        font-size: 1.4rem;
+        margin: 0;
         display: block; 
         grid-area: expected-p;
-        margin: 0;
-        font-size: 1.4rem;
     }
 
     .expected .p-alt {
@@ -1000,21 +957,19 @@ footer {
     }
 
     .expected p:nth-child(6) {
-        grid-area: expected-p2;
-        margin: 0;
         font-size: 1.4rem;
+        margin: 0;
+        grid-area: expected-p2;
     }
 
     .expected img {
-        grid-area: expected-image;
-        margin: 0;
         max-width: 100%;
-        height: auto;
+        margin: 0;
+        grid-area: expected-image;
     }
 
     .www {
         padding: 100px 10%;
-        
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
@@ -1052,8 +1007,7 @@ footer {
     }
     
     .newsletter button {
-        margin: 15px 25px 15px 100px;
-        font-size: 1.5rem;
+        margin-left: 100px;
         padding: 10px 75px;
     }
 
@@ -1070,9 +1024,9 @@ footer {
 
     .break img,
     .newyear img {
-        grid-area: break-image;
         width: 960px;
         height: 275px;
+        grid-area: break-image;
     }
 
     .break h2,
@@ -1089,9 +1043,9 @@ footer {
 
     .break p,
     .newyear p {
+        font-size: 1.2rem;
         margin-left: 25px;
         grid-area: break-p;
-        font-size: 1.2rem;
     }
 
     .friends,
@@ -1107,9 +1061,9 @@ footer {
 
     .friends img,
     .climbing img {
-        grid-area: friends-image;
         width: 960px;
         height: 275px;
+        grid-area: friends-image;
     }
 
     .friends h2,
@@ -1124,8 +1078,8 @@ footer {
 
     .friends p,
     .climbing p {
-        grid-area: friends-p;
         font-size: 1.2rem;
+        grid-area: friends-p;
     }
 
     .break,
@@ -1142,73 +1096,54 @@ footer {
     }
 
     .thanks h1 {
-        display: block;
         font-size: 4.5rem;
         margin: 25px 25%;
+        display: block;
+    }
+
+    .thanks img {
+        object-fit: contain;
     }
 
     .thanks img:nth-child(2) {
         max-width: 25%;
-        height: auto;
-        object-fit: contain;
     }
     
     .thanks img:nth-child(4) {
         width: 15%;
-        height: auto;
-        object-fit: contain;
     }
     
     .thanks img:nth-child(5) {
         width: 10%;
-        height: auto;
-        object-fit: contain;
     }
 }
 
                                                                 /* CONTACT */
-
-.hear h1 {
-    font-family: Raleway-Bold;
-    font-size: 4.25rem;
-    margin: 0 10%; 
-    /* i tried using margin: 0 inherit; on the above line, however when i validated my code it said that it was an incorrect line of code. i tohught that what i wrote was correct but i suppose not. */
-    padding: 30px 0;
-    color: #3C3B3A;
-}
-
-.hear p {
-    font-size: 1.75rem;
-    line-height: 1.3;
-    color: #3C3B3A;
-    margin-top: 5px;
-}
 
 .hear p:nth-child(3) {
     display: none;
 }
 
 .hear img {
-    display: block;
-    margin: 25px auto;
     max-width: 80%;
-    height: auto;
+    margin: 25px auto;
+    display: block;
 }
 
 .contactus {
-    display: flex;
-    flex-direction: column;
-    background-color: #26a682;
+    background-color: var(--ac-green);
     border-radius: 30px;
     margin: 50px 10%;
     box-shadow: 10px 10px 10px rgba(128,128,128, 0.5);
+    display: flex;
+    flex-direction: column;
 }
 
 .contactus h1 {
-    color: white;
-    margin: 25px 5% 0 5%;
     font-size: 3.5rem;
     font-family: Raleway-Bold;
+    color: white;
+    margin: 25px 5% 0 5%;
 }
 
 form {
@@ -1216,38 +1151,38 @@ form {
 }
 
 label {
-    color: white;
-    font-family: Raleway-Regular;
     font-size: 1.5rem;
+    font-family: Raleway-Regular;
+    color: white;
 }
 
 input[type="text"] {
-    font-family: Raleway-Regular;
     font-size: 1.5rem;
+    font-family: Raleway-Regular;
     border-radius: 30px;
     border: 0;
-    display: block;
-    clear: both;
     width: 95%;
     margin: 10px 0 25px 0;
     padding: 10px 0px 10px 25px;
+    display: block;
+    clear: both;
 }
 
 input[type="text"]:nth-child(8) {
-    padding: 10px 0px 100px 25px;
     border-radius: 15px;
+    padding: 10px 0px 100px 25px;
 }
 
 input[type="submit"] {
+    font-size: 3rem;
     font-family: Raleway-Bold;
     color: white;
     background-color: #3c3b39;
-    font-size: 3rem;
+    width: 100%;
     border-radius: 30px;
     border: 0;
-    width: 100%;
-    padding: 5px 0;
     margin-bottom: 25px;
+    padding: 5px 0;
     box-shadow: 0px 10px 10px rgba(60,59,57, 0.7);
 }
 
@@ -1279,24 +1214,17 @@ input[type="submit"] {
 }
 
 @media (min-width: 768px) {
-    .hear h1 {
-        font-family: Raleway-Bold;
-        font-size: 4.5rem;
-        margin-top: 50px;
-        padding-bottom: 0;
-    }
     .hear p:nth-child(2) {
         display: none;
     }
 
     .hear p:nth-child(3) {
         display: block;
-        font-size: 1.5rem;
     }
 
     .hear img {
-        margin: 25px auto;
         max-width: 60%;
+        margin: 25px auto;
     }
 
     .contactus {
@@ -1316,9 +1244,9 @@ input[type="submit"] {
     input[type="submit"] {
         font-size: 3rem;
         width: 50%;
-        display: block;
-        margin-left: auto;
         margin-bottom: 0;
+        margin-left: auto;
+        display: block;
     }
 
     .location h1 {
@@ -1345,8 +1273,8 @@ input[type="submit"] {
     }
 
     .hear p:nth-child(2) {
-        display: block;
         font-size: 1.25rem;
+        display: block;
     }
 
     .hear p:nth-child(3) {
@@ -1354,8 +1282,8 @@ input[type="submit"] {
     }
 
     .contactus {
-        grid-area: contactus;
         margin: 80px 0 50px 0;
+        grid-area: contactus;
     }
 
     .contactus h1 {
@@ -1367,9 +1295,9 @@ input[type="submit"] {
     }
 
     #contact-map {
-        grid-area: contact-map;
-        margin-top: 50px;
         width: 750px;
         height: 354px;
+        margin-top: 50px;
+        grid-area: contact-map;
     }
 }
