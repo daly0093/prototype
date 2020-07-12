@@ -1,5 +1,6 @@
 /* HOME */
 
+/* This adds the appropriate fonts needed for the midterm */
 @font-face {
     font-family: Raleway-Regular;
     src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Regular.ttf)
@@ -13,11 +14,9 @@
     src: url(mtm6201-midterm-master-files/Raleway/static/Raleway-Bold.ttf)
 }
 
-:root {
-    --ac-green: #26a682;
-    --dark-grey: #3c3b3a;
-}
+/* Lines 20 to 246 affect the mobile view for the home page. */
 
+/* From lines 20 to 49, some "global values" are introduced. What I mean is for example right below here, I'm setting the font-family as well as the margin to all h1's, h2's, p's and a's that are within the main section. */
 main h1,
 main h2,
 main p,
@@ -31,7 +30,7 @@ main a {
 .hear h1 {
     font-size: 3rem;
     font-family: Raleway-Bold;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     padding: 30px 0;
 }
 
@@ -40,7 +39,7 @@ main a {
 .hear p {
     font-size: 1.75rem;
     line-height: 1.5;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin-top: 5px;
 }
 
@@ -49,6 +48,7 @@ main img {
     height: auto;
 }
 
+/* The header is being worked from lines 52 to 88, I chose to make it flexbox because I thought that it would look better in my opinion than using grid, plus I wanted to get away with using both flexbox and grid in this midterm assignment. */
 header {
     background-color: #3C3B3A;
     display: flex;
@@ -75,6 +75,7 @@ header a {
     padding: 5px 0;
 }
 
+/* This tiny animation which intices the user to switch between pages if they hover over the "home," "about," or "contact" pages. */
 header a:hover {
     animation-name: a-hover;
     animation-duration: 0.5s;
@@ -86,9 +87,10 @@ header a:hover {
     font-weight: bold;
 }
 
+/* Lines 91 to 132 affect the "main top part" of the home page. it's the first page the "user" will see when going onto my website. */
 .icons {
     text-align: center;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin: 10px 0;
     display: grid;
     grid-template-columns: auto auto;
@@ -106,7 +108,7 @@ main button {
     font-size: 2.5rem;
     font-family: Raleway-Bold;
     color: white;
-    background-color: var(--ac-green);
+    background-color: #26a682;
     border-radius: 50px;
     border: 0;
     margin: 25px auto;
@@ -129,6 +131,7 @@ main button:active {
     margin-right: auto;
 }
 
+/* from lines 135 to 174 deals with both the "discover" section above the quote section and below it too. */
 .discover img {
     width: 768px;
     height: 250px;
@@ -139,7 +142,7 @@ main button:active {
     font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin-top: 25px;
 }
 
@@ -154,12 +157,12 @@ main button:active {
 .discover p {
     font-size: 1.25rem;
     line-height: 2.25;
-    color: var(--dark-grey);
+    color: #3c3b3a;
 }
 
 .discover .p-alt {
     font-size: 1.25rem;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     line-height: 2.25;
     display: none;
 }
@@ -170,8 +173,9 @@ main button:active {
     padding: 10px 30px;
 }
 
+/* The SA quote is being set-up here from lines 177 to 203. */
 .quote {
-    background-color: var(--dark-grey);
+    background-color: #3c3b3a;
     padding-top: 25px;
 }
 
@@ -198,9 +202,10 @@ main button:active {
     padding-bottom: 75px;
 }
 
+/* the footer is being affected from lines 206 to 246, this is the "basis" for all other footers in other pages. */
 footer {
     color: white;
-    background-color: var(--dark-grey);
+    background-color: #3c3b3a;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-areas:
@@ -225,7 +230,7 @@ footer {
 
 .back-to-top {
     text-align: center;
-    margin: 50px auto 50px auto;
+    margin: 50px auto;
     padding-top: 10px;
     grid-area: back-to-top;
 }
@@ -240,7 +245,9 @@ footer {
     height: 25px;
 }
 
+/* Lines 249 to 382 are what affect the tablet view of the home page. */
 @media (min-width: 768px) {
+    /* From lines 251 to 269, the header is being changed again so that the links are displayed along to the right side. */
     header {
         flex-direction: row;
         justify-content: space-evenly;
@@ -261,6 +268,7 @@ footer {
         margin-left: 10px;
     }
 
+    /* Here, from lines 273 to 282, more "global values" are being adjusted, this time it is for for tablet view. */
     .home-introduction h1,
     .expected h1,
     .hear h1{
@@ -285,6 +293,7 @@ footer {
         font-size: 0.75rem;
     }
 
+    /* Another tiny animation which makes the user want to scroll down to read more. */
     .scroll {
         margin: 10px;
         display: block;
@@ -293,6 +302,7 @@ footer {
         animation-iteration-count: infinite;
     }
 
+    /* From lines 306 to 316, the scroll animation feature from the above lines are being set up here. */
     .scroll p {
         font-size: 1rem;
         text-align: center;
@@ -337,6 +347,7 @@ footer {
         display: block;
     }
 
+    /* I decided to use CSS grid for the quote section because I originally tried to use flexbox however I felt that grid was a better fit for the quote area. This goes from line 351 to line 381. */
     .quote {
         display: grid;
         grid-template-columns: 40% 60%;
@@ -368,13 +379,11 @@ footer {
         line-height: 1.75;
         grid-area: paragraph;
     }
-
-    footer {
-        grid-template-columns: 20% 60% 20%; 
-    }
 }
 
+/* Lines 382 to 382 are what affect the desktop "web" view of the home page. */
 @media (min-width: 1300px) {
+    /* For the entire web view of the home page, I decided to make it have a display of grid. */
     main {
         display: grid;
         grid-template-columns: 100%;
@@ -385,10 +394,7 @@ footer {
         max-width: 5%;
     }
 
-    .links {
-        margin-right: 10%;
-    }
-
+    /* Here, from lines 401 to 447, I also chose to make the "home-introduction" section as grid so that it would format nicely. */
     .home-introduction {
         margin: 50px 10% 0;
         display: grid;
@@ -437,6 +443,7 @@ footer {
         font-size: 0.75rem;
     }
 
+    /* Same as with the "home-introduction" section, the "discover" section is being given a display of grid, to make formatting look more appealing. This goes from lines 450 to 502. */
     .discover,
     #firstdiscover {
         background-color: #F2F2F2;
@@ -491,9 +498,9 @@ footer {
         line-height: 1.25;
     }
 
+    /* Here I'm just altering how the grid looks for the quote. */
     .quote {
         padding: 10px 50px;
-        display: grid;
         grid-template-columns: 15% 15% 70%;
         grid-template-rows: 50% 50%;
         grid-template-areas:
@@ -504,31 +511,25 @@ footer {
     .quote img {
         width: 150px;
         height: 150px;
-        margin: 10px auto;
-        grid-area: image;
     }
     
     .quote h1 {
-        font-size: 1.5rem;
         margin: 0;
         padding-top: 50px;
-        grid-area: name;
     }
 
     .quote #president {
         margin: 0;
         padding: 0 0 50px 0;
-        grid-area: title;
     }
     
     .quote p {
-        font-size: 1.33rem;
         line-height: 1.5;
         margin: 0 50px;
         padding: 15px 0 0 0;
-        grid-area: paragraph;
     }
 
+    /* Same thing here as in the above comment, regarding the style of the grid. */
     #firstdiscover {
         grid-template-areas:
             "firstdiscover-image firstdiscover-h1"
@@ -561,9 +562,8 @@ footer {
         grid-area: firstdiscover-button;
     }
 
+    /* I wanted to change how the footer looks because I needed to in order to fit the "desktop" web view. */
     footer {
-        color: white;
-        background-color: #3C3B3A;
         padding: 25px 0;
         display: grid;
         grid-template-columns: 10% 80% 10%;
@@ -573,41 +573,17 @@ footer {
     }
 
     .socials {
-        text-align: center;
         margin: auto;
-        grid-area: socials;
-    }
-    
-    .socials h1 {
-        font-family: Raleway-Light;
-        margin-bottom: 10px;
-    }
-    
-    .socials img {
-        vertical-align: middle;
-        padding: 0 10px;
     }
     
     .back-to-top {
-        text-align: center;
         margin: auto;
-        padding-top: 10px;
-        grid-area: back-to-top;
-    }
-    
-    .back-to-top p {
-        font-size: 0.75rem;
-        margin: 0;
-    }
-    
-    .back-to-top img {
-        width: 25px;
-        height: 25px;
     }
 }
 
-                                                                /* ABOUT */
+/* Lines 584 to 751 are what affect the mobile view of the about page. */
 
+/* Since I used the "global values" at the beginning of my CSS file, I don't really need to alter too much for the expected class so there's only minimal adjustments here from lines 587 to 608. */
 .expected {
     margin: 35px 0;
 }
@@ -631,6 +607,7 @@ footer {
     display: block;
 }
 
+/* This here, from lines 611 to 667, format the about and contact classes themselves, as well as the images, the h1's, and the green filter I applied to the images for the about and services classes. */
 .about,
 .services {
     margin-bottom: 20px;
@@ -664,14 +641,14 @@ footer {
     font-size: 2.5rem;
     font-family: Raleway-Bold;
     font-style: italic;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin-top: 30px;
 }
 
 .about p {
     font-size: 1.3rem;
     line-height: 2.125;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin-top: 10px;
 }
 
@@ -689,6 +666,7 @@ footer {
     position: absolute;
 }
 
+/* I'm affecting all of the services provided, from lines 670 to 712. From the "Need a break?" section, down to the "Indoor climbing?" section. */
 .break img,
 .friends img,
 .newyear img,
@@ -703,7 +681,7 @@ footer {
 .climbing h2 {
     font-size: 2.33rem;
     font-family: Raleway-Bold;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin-top: 25px;
 }
 
@@ -713,7 +691,7 @@ footer {
 .climbing h3 {
     font-size: 2rem;
     font-family: Raleway-Light;
-    color: var(--ac-green);
+    color: #26a682;
     margin: 10px 0 10px 10%;
 }
 
@@ -723,7 +701,7 @@ footer {
 .climbing p {
     font-size: 1.25rem;
     line-height: 2.25;
-    color: var(--ac-green);
+    color: #26a682;
     padding-bottom: 25px;
 }
 
@@ -733,8 +711,9 @@ footer {
     padding: 25px 0;
 }
 
+/* The newsletter portion of the about page is being set up from lines 715 to 731. */
 .newsletter {
-    background-color: var(--dark-grey);
+    background-color: #3c3b3a;
     padding-top: 30px;
     padding-bottom: 10px;
 }
@@ -751,6 +730,7 @@ footer {
     box-shadow: none;
 }
 
+/* Lastly, the thank you section is set up here. */
 .thanks {
     margin: 0 10%;
 }
@@ -760,7 +740,7 @@ footer {
     font-family: Raleway-Bold;
     line-height: 1.25;
     text-align: center;
-    color: var(--dark-grey);
+    color: #3c3b3a;
     margin: 25px 0;
 }
 
@@ -771,7 +751,9 @@ footer {
     display: block;
 }
 
-@media (min-width: 768px) {          
+/* Lines 754 to 916 are what affect the tablet view of the about page. */
+@media (min-width: 768px) {
+    /* Here, the "What to expect during" part at the top of the about page is what's being altered here, swapping in and out h1's and p's mostly. */
     .expected {
         margin: 75px 0;
     }
@@ -798,23 +780,21 @@ footer {
 
     .about img,
     .services img {
-        width: 100%;
         height: 175px;
-        object-fit: cover;
+    }
+
+    .about p {
+        font-size: 1.125rem;
+        line-height: 2;
+    }
+    
+    .services h1 {
+        top: 30%;
     }
 
     #greenaboutfilter,
     #greenservicesfilter {
         height: 175px;
-    }
-    
-    .about p {
-        font-size: 1.125rem;
-        line-height: 2;
-    }
-
-    .services h1 {
-        top: 30%;
     }
 
     .break img,
@@ -827,6 +807,7 @@ footer {
         display: block;
     }
 
+    /* This sets up the grid display for the break and newyear classes. */
     .break,
     .newyear {
         padding: 50px;
@@ -879,6 +860,7 @@ footer {
         margin: 15px 25px 15px 50px;
     }
 
+    /* Exact same thing going on here as above with the break and newyear classes with the grid display, however it is reversed to show the picture on the opposite side. */
     .friends,
     .climbing {
         padding: 50px;
@@ -933,11 +915,13 @@ footer {
     }
 }
 
+/* Lines 919 to 1101 are what affect the "desktop" web view of the about page. */
 @media (min-width: 1300px) {
     main {
         display: block;
     }
 
+    /* Here, from lines 925 to 968, I set up another grid system for the "desktop" web view of the about page. */
     .expected {
         padding: 0 10%;
         display: grid;
@@ -948,7 +932,6 @@ footer {
             ". expected-image"
             "expected-p expected-image"
             "expected-p2 ."
-
     }
 
     .expected h1 {
@@ -1027,9 +1010,9 @@ footer {
         padding: 10px 75px;
     }
 
+    /* Here are just some slight adjustments I made to the grid display so that it looks more visually appealing for the "desktop" web view. This goes from line 1014 to line 1072. */
     .break,
     .newyear {
-        display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 20% 20% 40% 40%;
         grid-template-areas:
@@ -1042,31 +1025,26 @@ footer {
     .newyear img {
         width: 960px;
         height: 275px;
-        grid-area: break-image;
     }
 
     .break h2,
     .newyear h2 {
         margin-left: 25px;
-        grid-area: break-h2;
     }
 
     .break h3,
     .newyear h3 {
         margin-left: 25px;
-        grid-area: break-h3;
     }
 
     .break p,
     .newyear p {
         font-size: 1.2rem;
         margin-left: 25px;
-        grid-area: break-p;
     }
 
     .friends,
     .climbing {
-        display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 20% 20% 40% 40%;
         grid-template-areas:
@@ -1079,23 +1057,11 @@ footer {
     .climbing img {
         width: 960px;
         height: 275px;
-        grid-area: friends-image;
-    }
-
-    .friends h2,
-    .climbing h2 {
-        grid-area: friends-h2;
-    }
-
-    .friends h3,
-    .climbing h3 {
-        grid-area: friends-h3;
     }
 
     .friends p,
     .climbing p {
         font-size: 1.2rem;
-        grid-area: friends-p;
     }
 
     .break,
@@ -1134,8 +1100,9 @@ footer {
     }
 }
 
-                                                                /* CONTACT */
+/* Lines 1106 to 1199 are what affect the mobile view of the contact page. */
 
+/* Since I used the "global values" at the beginning of my CSS file, I don't really need to alter too much for the hear class so there's only minimal adjustments here from lines 1106 to 1114. */
 .hear p:nth-child(3) {
     display: none;
 }
@@ -1146,8 +1113,9 @@ footer {
     display: block;
 }
 
+/* Here is probably the longest part of the contact part of my CSS, as it deals with the "Contact us." form. This goes from line 1117 all the way to 1171. */
 .contactus {
-    background-color: var(--ac-green);
+    background-color: #26a682;
     border-radius: 30px;
     margin: 50px 10%;
     box-shadow: 10px 10px 10px rgba(128,128,128, 0.5);
@@ -1202,6 +1170,7 @@ input[type="submit"] {
     box-shadow: 0px 10px 10px rgba(60,59,57, 0.7);
 }
 
+/* Lines 1174 to 1193 affect the location information, showing users where they're able to find where the ARC building is. */
 .location h1 {
     font-size: 3rem;
     font-family: Raleway-Bold;
@@ -1229,7 +1198,9 @@ input[type="submit"] {
     object-fit: cover;
 }
 
+/* Lines 1202 to 1244 are what affect the tablet view of the contact page. */
 @media (min-width: 768px) {
+    /* From 1204 to 1214, the p gets switched and the image width gets changed. */
     .hear p:nth-child(2) {
         display: none;
     }
@@ -1240,7 +1211,6 @@ input[type="submit"] {
 
     .hear img {
         max-width: 60%;
-        margin: 25px auto;
     }
 
     .contactus {
@@ -1258,7 +1228,6 @@ input[type="submit"] {
    }
 
     input[type="submit"] {
-        font-size: 3rem;
         width: 50%;
         margin-bottom: 0;
         margin-left: auto;
@@ -1274,6 +1243,7 @@ input[type="submit"] {
     }
 }
 
+/* Lines 1247 to 1289 are what affect the "desktop" web view of the about page. */
 @media (min-width: 1300px) {
     .contactcontent {
         display: grid;
@@ -1318,6 +1288,7 @@ input[type="submit"] {
     }
 }
 
+/* These final bits of code at the very end of my style.css here from 1292 to 1332 are for the animations used within the webpage. I decided to put them here just so that they're out of the way. */
 @keyframes button-press {
     0%  {
         transform: scale(1);
